@@ -1,4 +1,4 @@
-// File: clinic7/core/PatManLL.java
+
 package com.clinic7.core;
 
 import java.time.LocalDate;
@@ -6,7 +6,7 @@ import java.util.NoSuchElementException;
 import java.util.function.Predicate;
 
 import com.clinic7.storage.PatientFileHandler;
-import com.clinic7.data.LinkedList; // Pastikan ini diimpor
+import com.clinic7.data.LinkedList;
 import com.clinic7.model.Patient;
 import com.clinic7.util.IDGenerator;
 
@@ -73,10 +73,7 @@ public class PatManLL {
         if (bloodType != null && !bloodType.isEmpty()) p.setBloodType(bloodType);
         // PERBAIKAN: Jika riwayat medis diupdate, ini akan mengganti seluruh LinkedList
         if (history != null && !history.isEmpty()) {
-            // Ini akan membuat LinkedList baru, bukan menambah
-            // Jika ingin menambah, Patient.addMedicalRecord() harus dipanggil
             LinkedList<String> newHistoryList = new LinkedList<>();
-            // Asumsi history di sini adalah string tunggal, jadi masukkan sebagai 1 record baru
             newHistoryList.addLast(history);
             p.setMedicalHistory(newHistoryList);
         }
