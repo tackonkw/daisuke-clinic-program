@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 import java.util.NoSuchElementException;
-import java.util.function.Consumer; // Tambahkan import ini untuk viewUpcomingAppointments
+import java.util.function.Consumer; 
 
 import com.clinic7.data.LinkedList;
 import com.clinic7.model.Appointment;
@@ -18,7 +18,6 @@ public class AppointmentQueue{
             (a1, a2) -> a1.getTime().compareTo(a2.getTime());
 
     private static final String APPOINTMENT_FILE = "resources/appointments.csv";
-    // private static AppointmentFileHandler appointmentFileHandler = new AppointmentFileHandler();
 
     private PatManLL patientManager;
     private DoctorManagement doctorManager;
@@ -49,7 +48,7 @@ public class AppointmentQueue{
 
         Patient patient = patientManager.findPatientById(appointment.getPatientID());
         Doctor doctor = null;
-        try { // Perbaikan: Ambil dokter dari DoctorManagement
+        try {
             doctor = doctorManager.getAllDoctors().findData(d -> d.getId().equals(appointment.getDoctorID()));
         } catch (NoSuchElementException e) {
             // doctor akan tetap null
@@ -157,7 +156,6 @@ public class AppointmentQueue{
         return appointments.size();
     }
 
-    // Perbaikan: Sekarang menerima Consumer untuk format tampilan dari Main.java
     public void viewUpcomingAppointments(Consumer<Appointment> displayAction) {
         if(appointments.isEmpty()) {
             System.out.println("Tidak ada janji temu mendatang.");
@@ -165,7 +163,7 @@ public class AppointmentQueue{
         }
         System.out.println("Janji Temu Mendatang (Terurut Waktu):");
         System.out.println("======================================================");
-        appointments.forEach(displayAction); // Memanggil displayAction dari Main.java
+        appointments.forEach(displayAction); 
         System.out.println("======================================================");
     }
 
