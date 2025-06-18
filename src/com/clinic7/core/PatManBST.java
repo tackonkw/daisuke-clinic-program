@@ -27,13 +27,11 @@ public class PatManBST {
     }
 
     public Patient findPatientById(String id) {
-        // PERBAIKAN: Gunakan constructor dummy yang baru dengan argumen 'true'
         Patient dummy = new Patient(id, null, 0, null, null, null, null, null, null);
         return patientTree.findData(dummy);
     }
 
     public boolean deletePatient(String id) {
-        // PERBAIKAN: Gunakan constructor dummy yang baru dengan argumen 'true'
         Patient dummy = new Patient(id, null, 0, null, null, null, null, null, null);
         if (patientTree.contains(dummy)) {
             patientTree.delete(dummy);
@@ -44,7 +42,6 @@ public class PatManBST {
 
     public boolean updatePatient(String id, String name, String ageStr, String gender,
                                  String phoneNum, String address, String bloodType, String history){
-        // PERBAIKAN: Gunakan constructor dummy yang baru dengan argumen 'true'
         Patient dummy = new Patient(id, null, 0, null, null, null, null, null, null);
         Patient p = patientTree.findData(dummy);
         if (p == null) return false;
@@ -69,7 +66,6 @@ public class PatManBST {
     }
 
     public boolean patientExists(String id) {
-        // PERBAIKAN: Gunakan constructor dummy yang baru dengan argumen 'true'
         Patient dummy = new Patient(id, null, 0, null, null, null, null, null, null);
         return patientTree.contains(dummy);
     }
