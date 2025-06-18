@@ -1,5 +1,4 @@
 // File: Main.java
-// PERBAIKAN KRUSIAL: Deklarasi paket harus HANYA 'com.clinic7.app'
 package com.clinic7.app;
 
 // Impor semua kelas dari paket 'com.clinic7.core'
@@ -11,16 +10,15 @@ import com.clinic7.model.Doctor;
 import com.clinic7.model.Patient;
 import com.clinic7.model.Appointment;
 
-// Impor kelas utilitas
+// Impor kelas utilities
 import com.clinic7.util.IDGenerator;
 
-// Impor kelas data (LinkedList kustom Anda)
+// Impor kelas data
 import com.clinic7.data.LinkedList;
 
 // Impor dari Java Standard Library
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-// import java.util.List;
 import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
@@ -28,7 +26,7 @@ import java.time.LocalDate;
 
 public class Main {
 
-    // ANSI Escape Codes (lebih sederhana)
+    // ANSI Escape Codes
     public static final String RESET = "\033[0m";
     public static final String BOLD = "\033[1m";
     public static final String RED = "\033[0;31m";
@@ -80,7 +78,6 @@ public class Main {
                 choice = -1;
             } catch (Exception e) {
                 System.err.println(RED + "\n[FATAL ERROR]" + RESET + " Terjadi kesalahan tak terduga: " + e.getMessage());
-                // e.printStackTrace(); // Uncomment for detailed debugging if needed
                 choice = -1;
             }
             pressEnterToContinue();
@@ -105,9 +102,6 @@ public class Main {
         System.out.println(GREEN + "==========================================================" + RESET);
         System.out.println(GREEN + "||" + RESET + BOLD + "           SELAMAT DATANG DI DAISUKE CLINIC           " + RESET + GREEN + "||" + RESET);
         System.out.println(GREEN + "==========================================================" + RESET);
-        // System.out.println(CYAN + "                  " + RESET);
-        // System.out.println(BOLD + "                    " + RESET);
-        // System.out.println(GREEN + "------------------------------------------------------" + RESET);
         System.out.println(" Tanggal: " + LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")) + RESET);
         System.out.println(" Waktu:   " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")) + RESET);
         System.out.println(GREEN + "==========================================================" + RESET);
