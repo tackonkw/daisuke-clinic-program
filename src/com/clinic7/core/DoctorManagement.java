@@ -23,7 +23,7 @@ public class DoctorManagement {
     }
 
     public void registerDoctor(String name, String specialty){
-        String id = IDGenerator.generateDoctorID(); // Panggil metode statis dari IDGenerator
+        String id = IDGenerator.generateDoctorID();
         Doctor doctor = new Doctor(id, name, specialty);
 
         boolean alreadyRegistered = registeredDoctor.contains(d -> d.getName().equalsIgnoreCase(name) && d.getSpecialty().equalsIgnoreCase(specialty));
