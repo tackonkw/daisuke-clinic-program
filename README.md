@@ -360,11 +360,10 @@ Tekan ENTER untuk melanjutkan...
 ````
 
 ## 4. Peran Anggota Kelompok
-* [Bagas Aditama Suryo Nugroho](https://github.com/jempolbagas) `(L01240542)` [PatManLL.java, PatManBST.java, IDGenerator.java, Linkedlist.java, Main.java ]
-* [Hendrata Wibsar Mulyasaputra](https://github.com/Hendrata-PJ) `(L0124056)` [Doctor.java, ]
-* [Huda Febri Pradana](https://github.com/git-HDfp) `(L0124057)` [Readme.md, DoctorFileHandler.java, Main.java, Queue.java, ]
-* [Dzaky Ghiffary Susilo](https://github.com/tackonkw) `(L0124097)` [Patients.java, PatManBST.java,]
-
+* [Bagas Aditama Suryo Nugroho](https://github.com/jempolbagas) `(L01240542)` [PatManLL.java, PatManBST.java, IDGenerator.java, Linkedlist.java, Main.java, Patients.java, BinarySearchTree.java, Queue.java, PATComparator.java, PatientFileHandler.java, AppointmentFileHandler.java, Pembuatan Video Demo, Tester]
+* [Hendrata Wibsar Mulyasaputra](https://github.com/Hendrata-PJ) `(L0124056)` [Doctor.java, DoctorFileHandler.java]
+* [Huda Febri Pradana](https://github.com/git-HDfp) `(L0124057)` [Readme.md, DoctorFileHandler.java, DoctorManagement.java, Main.java, Queue.java, Appointment.java, Doctor.java, AppointmentFileHandler.java, Pembuatan Video Demo, Tester]
+* [Dzaky Ghiffary Susilo](https://github.com/tackonkw) `(L0124097)` [Patients.java, PatManBST.java, PatManLL.java, Peng-upload-an Assignment]
 
 ## 5. Video Tubes
 Video Tubes dapat diakses  [disini](https:NULL).
