@@ -56,7 +56,6 @@ public class IDGenerator {
     public static synchronized String generatePatientID() {
         String currentDate = getCurrentDateString();
         if (!currentDate.equals(lastDate)) {
-            // lastDate = currentDate;
             patientCounter = 0;
             props.setProperty("lastDate", currentDate);
         }
@@ -69,7 +68,6 @@ public class IDGenerator {
     public static synchronized String generateDoctorID() {
         String currentDate = getCurrentDateString();
         if (!currentDate.equals(lastDate)) {
-            // lastDate = currentDate;
             doctorCounter = 0;
             props.setProperty("lastDate", currentDate);
         }
@@ -82,7 +80,6 @@ public class IDGenerator {
     public static synchronized String generateAppointmentID() {
         String currentDate = getCurrentDateString();
         if (!currentDate.equals(lastDate)) {
-            // lastDate = currentDate;
             appointmentCounter = 0;
             props.setProperty("lastDate", currentDate);
         }
