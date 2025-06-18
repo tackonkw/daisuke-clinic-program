@@ -11,18 +11,15 @@ import com.clinic7.storage.DoctorFileHandler;
 
 
 public class DoctorManagement {
-    // Variabel yang menyebabkan error 'Cannot resolve symbol'
-    // private LinkedList<Doctor> doctorList; // Pastikan LinkedList resolve dengan benar
+ 
     String path = "resources/doctors.csv";
 
-    private LinkedList<Doctor> registeredDoctor; // Pastikan LinkedList resolve dengan benar
+    private LinkedList<Doctor> registeredDoctor; 
 
     private final LinkedList<Doctor> loggedInList = new LinkedList<>();
 
     public DoctorManagement() {
-        // Penugasan ini sekarang valid karena 'registeredDoctor' bukan 'final'
         this.registeredDoctor = DoctorFileHandler.loadAllDoctors(path);
-        // this.doctorList = this.registeredDoctor; // Untuk konsistensi jika ada yang masih pakai doctorList
     }
 
     public void registerDoctor(String name, String specialty){
@@ -89,7 +86,6 @@ public class DoctorManagement {
     }
 
     public int size() {
-        // Mengembalikan ukuran dokter yang sedang login
         return loggedInList.size();
     }
 
@@ -103,27 +99,22 @@ public class DoctorManagement {
     }
 
     public int getRegisteredDoctorSize() {
-        // Mengembalikan ukuran semua dokter yang terdaftar
         return registeredDoctor.size();
     }
 
     public LinkedList<Doctor> getAllDoctors(){
-        // Mengembalikan semua dokter yang terdaftar (loaded + baru)
         return registeredDoctor;
     }
 
     public LinkedList<Doctor> getLoggedInDoctors() {
-        // Mengembalikan daftar dokter yang sedang login
         return loggedInList;
     }
 
     public boolean isDoctorLoggedIn(String doctorName) {
-        // Mengecek apakah dokter sedang login
         return loggedInList.contains(d -> d.getName().equalsIgnoreCase(doctorName));
     }
 
     public Doctor findDoctorBySpecialty(String specialty) {
-        // Mencari satu dokter berdasarkan spesialisasi
         try {
             return registeredDoctor.findData(d -> d.getSpecialty().equalsIgnoreCase(specialty));
         } catch (NoSuchElementException e) {
@@ -132,7 +123,6 @@ public class DoctorManagement {
     }
 
     public LinkedList<Doctor> getDoctorsBySpecialty(String specialty) {
-        // Mendapatkan semua dokter dengan spesialisasi tertentu
         LinkedList<Doctor> doctors = new LinkedList<>();
         registeredDoctor.forEach(d -> {
             if (d.getSpecialty().equalsIgnoreCase(specialty)) {
@@ -143,7 +133,6 @@ public class DoctorManagement {
     }
 
     public Doctor findDoctorById(String doctorId) {
-        // Mencari dokter berdasarkan ID (sering dibutuhkan untuk validasi)
         try {
             return registeredDoctor.findData(d -> d.getId().equals(doctorId));
         } catch (NoSuchElementException e) {
