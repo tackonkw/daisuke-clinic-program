@@ -366,7 +366,7 @@ Tekan ENTER untuk melanjutkan...
 * [Dzaky Ghiffary Susilo](https://github.com/tackonkw) `(L0124097)` [Patients.java, PatManBST.java, PatManLL.java, Peng-upload-an Assignment]
 
 ## 5. Video Tubes
-Video Tubes dapat diakses  [disini](https:NULL).
+Video Tubes dapat diakses  [disini](https://youtu.be/R8qa9UZ2tAM).
 
 
 
